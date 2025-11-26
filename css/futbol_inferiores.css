@@ -1,0 +1,90 @@
+.titulo-container {
+    text-align: center;
+    margin: 20px 0 30px;
+}
+
+.titulo-container h2 {
+    font-size: 1.8rem;
+    color: #1b1b1b;;
+}
+
+/* Mensaje debajo del título */
+.mensaje-categorias {
+  text-align: center;
+  margin: 10px 0 20px;
+  background-color: #D32F2F;
+  color: #fff;
+  padding: 10px;
+
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Centrar tablas y agregar margen entre ellas */
+.categoria {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.tabla-clasificacion-wrapper{
+    background-color: #eeeeee; /* Fondo gris como en inicio */
+    border-radius: 12px; 
+    padding: 12px; 
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+}
+
+.tabla-clasificacion-wrapper h3{
+    text-align: center;
+}
+
+.tabla-clasificacion {
+    font-size: 0.85rem; /* Tamaño de fuente igual al de inicio */
+}
+
+tbody tr:nth-child(-n+3) .posicion {
+    background-color: transparent; /* Green for top 3 positions */
+}
+  
+  tbody tr:nth-child(n+4):nth-child(-n+7) .posicion {
+    background-color: transparent; /* Yellow for positions 4 to 6 */
+}
+
+/* Grid para las tablas */
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columnas base para mayor control */
+    gap: 20px;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 1200px;
+  }
+  
+  /* Primera fila: 3 tablas (2 columnas cada una) */
+  .categoria:nth-child(1),
+  .categoria:nth-child(2),
+  .categoria:nth-child(3) {
+    grid-column: span 2; /* Ocupan 2 de las 6 columnas (2x3 = 6) */
+  }
+  
+  /* Segunda fila: 2 tablas (mismo ancho que las primeras, 2 columnas cada una) */
+  .categoria:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+  .categoria:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .futbol-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contacto-sidebar {
+        position: static;
+        order: -1;
+        margin-bottom: 30px;
+    }
+}

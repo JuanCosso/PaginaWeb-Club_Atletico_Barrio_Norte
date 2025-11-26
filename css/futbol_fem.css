@@ -1,0 +1,195 @@
+.titulo-container {
+    text-align: center;
+    margin: 20px 0 30px;
+}
+
+.titulo-container h2 {
+    font-size: 1.8rem;
+    color: #1b1b1b;;
+}
+
+.futbol-container {
+    display: grid;
+    grid-template-columns: 2.95fr 1fr;
+    gap: 20px;
+    margin: 0 20px;
+}
+
+/* Resultados */
+.resultados-list {
+    position: relative;
+    color: #1b1b1b; /* Color de texto principal */
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.resultados-list::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent; /* Fondo transparente para overlay */
+    z-index: 0;
+
+}
+
+.equipo-local, .equipo-visitante {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.partido {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr auto;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    margin-bottom: 10px; /* Espaciado entre partidos */
+    background-color: #eeeeee; /* Color de fondo original */
+    color: #1b1b1b; /* Texto claro para contraste */
+    border-radius: 12px; /* Bordes redondeados */
+    position: relative;
+    overflow: hidden; /* Asegura que el fondo no sobresalga */
+    z-index: 1; /* Asegurar que esté sobre el overlay */
+}
+
+.equipo-local { 
+    justify-content: flex-end; 
+}
+
+.equipo-visitante { 
+    justify-content: flex-start; 
+}
+
+#bn{
+    font-weight: bold;
+    color:#D32F2F;
+}
+
+.marcador {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #1b1b1b; /* Marcador en blanco */
+}
+
+.fecha {
+    text-align: left; /* Mover hacia la izquierda */
+    font-size: 0.9rem;
+    color: #1b1b1b;
+    margin-left: 10px; /* Ajustar margen */
+}
+
+/* Jugadores */
+.jugadores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.jugador-card {
+    background: #eeeeee;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+}
+
+.jugador-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Tarjeta de Contacto */
+.contacto-sidebar {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.contacto-card {
+    background: #eeeeee;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.foto-encargado {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin: 0 auto 10px;
+}
+
+.contacto-info p {
+    margin: 8px 0;
+    font-size: 0.9rem;
+}
+
+.tabla-clasificacion-wrapper{
+    background-color: #eeeeee; /* Fondo gris como en inicio */
+    border-radius: 12px; 
+    padding: 12px; 
+    margin-top: 30px;
+}
+
+.tabla-clasificacion-wrapper h3{
+    text-align: center;
+}
+
+.tabla-clasificacion {
+    font-size: 0.85rem; /* Tamaño de fuente igual al de inicio */
+}
+
+.tabla-goleadores-wrapper {
+    background-color: #D32F2F;
+    border-radius: 12px;
+    padding: 0 12px 0;
+    margin-top: 20px;
+}
+  
+.tabla-goleadores-wrapper h3 {
+    text-align: center;
+    color: #ffffff;
+    padding: 8px;
+    font-size: 1.1rem;
+}
+  
+.tabla-goleadores {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+  
+.tabla-goleadores tr {
+    background-color: rgb(183, 28, 28,0.3);
+    transition: all 0.2s ease;
+}
+  
+.tabla-goleadores td {
+    color: #ffffff;
+    padding: 12px 15px;
+    position: relative;
+    font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .futbol-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contacto-sidebar {
+        position: static;
+        order: -1;
+        margin-bottom: 30px;
+    }
+}

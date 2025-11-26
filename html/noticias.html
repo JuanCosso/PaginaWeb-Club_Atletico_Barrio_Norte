@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="css/inicio.css">
+<link rel="stylesheet" href="css/noticias.css">
+
+<!-- Actualiza el HTML en noticias.html -->
+<div class="noticias-container">
+  <div class="noticias-header">
+    <div class="titulo-container">
+      <h2>Noticias Recientes</h2>
+      <p>Mantenete al día con las últimas novedades del club</p>
+    </div>
+
+    <aside class="filter-container">
+      <div class="media-partners">
+        <a href="https://www.diariodebatepregon.com" target="_blank">
+          <img src="img/El_Debate_Pregón.png" alt="El Debate Pregón" class="media-logo">
+        </a>
+        <a href="https://www.gualeguaydeportes.com.ar" target="_blank">
+          <img src="img/Gualeguay_Deportes.png" alt="Gualeguay Deportes" class="media-logo">
+        </a>
+        <a href="https://www.radiogualeguay.com.ar" target="_blank">
+          <img src="img/Radio_Gualeguay.png" alt="Radio Gualeguay" class="media-logo">
+        </a>
+        <a href="https://www.canal2gualeguay.com.ar" target="_blank">
+          <img src="img/Canal2_Gualeguay.png" alt="Canal 2 Gualeguay" class="media-logo">
+        </a>
+      </div>
+      <form id="filter-form">
+        <div class="filter-group">
+          <label for="filter-date">Ordenar por fecha</label>
+          <select id="filter-date" class="date-select">
+            <option value="recent">Más recientes</option>
+            <option value="oldest">Más antiguas</option>
+          </select>
+        </div>
+        
+        <div class="filter-group">
+          <label for="filter-tag">Filtrar por etiqueta</label>
+          <select id="filter-tag" class="tag-select">
+            <option value="">Todas las noticias</option>
+            <option value="Fútbol">Fútbol</option>
+            <option value="Samba Verá">Samba Verá</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Inferiores">Inferiores</option>
+            <option value="Infantiles">Infantiles</option>
+            <option value="Club">Club</option>
+            <option value="Socios">Socios</option>
+            <option value="Tenis">Tenis</option>
+            <option value="Gimnasia">Gimnasia</option>
+            <option value="Bochas">Bochas</option>
+            <option value="Ciclismo">Ciclismo</option>
+            <option value="Torneo">Torneo</option>
+            <option value="Cantina">Cantina</option>
+          </select>
+        </div>
+        
+        <button type="submit" id="apply-filters">Filtrar</button>
+      </form>
+    </aside>
+  </div>
+
+  <!-- Contenedor de noticias -->
+
+</div>
+

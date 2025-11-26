@@ -1,0 +1,178 @@
+/* En tu archivo noticias.css */
+.noticias-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.titulo-container {
+  text-align: center;
+  grid-row: 1;
+}
+
+.titulo-container h2{
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #1b1b1b;
+}
+
+.titulo-container p{
+  color: #D32F2F;
+  font-weight: bold;
+}
+
+.filter-container {
+  color: #D32F2F;
+  text-align: center;
+  font-weight: bold;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: end;
+}
+
+.media-partners {
+  grid-column: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 0;
+}
+
+.media-logo {
+  height: 60px;
+  width: 140px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  padding: 8px;
+  border-radius: 4px;
+  opacity: 0.8;
+}
+
+.media-logo[alt="Radio Gualeguay"] {
+  width: 80px;
+}
+
+.media-logo:hover {
+  opacity: 1;
+  filter: brightness(1.1);
+}
+
+/* Estilos del formulario */
+#filter-form {
+  grid-column: 2;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.filter-group {
+  position: relative;
+}
+
+.date-input,
+.tag-select,
+.date-select {
+  font-family: 'Poppins', sans-serif;
+  border-radius: 6px;
+  border: 1px solid var(--secondary-color);
+  background: #ededed;
+  text-align: center;
+  padding: 8px;
+  min-width: 150px;
+}
+
+.tag-select,
+.date-select {
+  position: relative;
+  transform: translateY(0);
+  cursor: pointer;
+}
+
+.tag-select option,
+.date-select option {
+  background-color: #fff;
+  color: #1b1b1b;
+  padding: 8px;
+}
+
+.tag-select option:hover,
+.date-select option:hover {
+  background-color: #880E0E !important;
+  color: #f8f8f8 !important;
+}
+
+.tag-select option:checked,
+.date-select option:checked {
+  background-color: #B71C1C !important;
+  color: #fff !important;
+}
+
+#apply-filters {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 18px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 36px;
+  align-self: center;
+}
+
+#apply-filters:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.05);
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .noticias-header {
+    grid-template-columns: 1fr;
+  }
+  
+  .filter-container {
+    grid-column: 1;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  #filter-form {
+    flex-wrap: wrap;
+  }
+  
+  .filter-group {
+    flex: 1;
+    min-width: 160px;
+  }
+}
+/* Estilo para el botón de cargar más */
+#load-more-news {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #D32F2F; /* Rojo similar al subtítulo */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#load-more-news:hover {
+  background-color: #B71C1C; /* Rojo más oscuro para hover */
+  transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+#load-more-news:active {
+  background-color: #880E0E; /* Rojo aún más oscuro para clic */
+  transform: scale(0.95); /* Efecto de compresión */
+}

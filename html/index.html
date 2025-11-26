@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Atlético Barrio Norte</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="icon" href="img/Barrio Norte.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hurricane&display=swap" rel="stylesheet">
+    <script src="js/noticiasLoader.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/museo_slider.js"></script>
+    <script src="js/planes.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/historia.js"></script>
+</head>
+<body>
+    <header>
+        <div class="movil-container">    
+            <div id="escudo">
+                <img src="img/Barrio Norte.png" alt="Escudo">
+            </div>
+            <h1>Club Atlético Barrio Norte</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0)" onclick="loadPage('inicio')">Inicio</a></li>
+                <li><a href="javascript:void(0)" onclick="loadPage('noticias')">Noticias</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Club</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0)" onclick="loadPage('historia')">Historia</a></li>
+                        <li><a href="javascript:void(0)" onclick="loadPage('estadio')">Estadio</a></li>
+                        <li><a href="javascript:void(0)" onclick="loadPage('museo')">Museo Online</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Socios</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0)" onclick="loadPage('socios')">Montos 2025</a></li>
+                        <li><a href="javascript:void(0)" onclick="loadPage('galeria')">Galería</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Disciplinas</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0)" onclick="loadPage('futbol')">Fútbol</a></li>
+                        <li><a href="javascript:void(0)" onclick="loadPage('futbol_fem')">Fútbol Femenino</a></li>
+                        <li><a href="javascript:void(0)" onclick="loadPage('futbol_inferiores')">Fútbol Inferiores</a></li>
+                        <li><a href="javascript:void(0)" onclick="loadPage('futbol_infantiles')">Fútbol Infantil</a></li>
+                        <li><a href="javascript:void(0)" onclick="loadPage('tenis')">Tenis</a></li>
+                        <li><a href="javascript:void(0)" onclick="loadPage('gimnasia')">Gimnasia Rítmica</a></li>
+                        <li><a href="javascript:void(0)" onclick="loadPage('bochas')">Bochas</a></li>
+                        <li><a href="javascript:void(0)" onclick="loadPage('ciclismo')">Ciclismo</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Tienda</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0)" onclick="loadPage('tienda_online')">Catálogo</a></li>
+                        <li><a href="javascript:void(0)" onclick="loadPage('tienda_fisica')">Planeta Fútbol</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Samba Verá</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0)" onclick="loadPage('samba_vera')">Historia de la comparsa</a></li>
+                        <li><a href="javascript:void(0)" onclick="loadPage('samba_vera_insc')">Inscripciones 2026</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!--javascript:void(0) evita que el navegador recargue la ágina, permitiendo cargar las selecciones sin hacer una nueva petición al servidor -->
+        <!-- onclick="loadPage('nombre')" es un evento de JavaScript que, cuando se hace clic en el enlace, ejecuta la función loadPage con un parámetro, en este caso, el nombre de la sección-->
+    </header>
+
+    <main id="main-content">
+        <!-- Se cargará el contenido de cada sección aquí dinámicamente -->
+    </main>
+
+    <footer>
+        <div class="footer-lema-bn">
+            <img src="img/kits/barrio norte/Barrio Norte Casaca.png" alt="Escudo Barrio Norte" class="footer-lema-escudo">
+            <span class="footer-lema-principal">
+                <span class="footer-lema-cada">Cada vez</span><br>
+                <span class="footer-lema-masgrande">MÁS GRANDE</span>
+            </span>
+        </div>
+        <div class="footer-container">
+            <!-- Sección de Contacto -->
+            <div class="footer-contacto">
+                <h3>Contacto</h3>
+                <p>
+                    <a href="https://www.google.com/maps/place/Club+Atl%C3%A9tico+Barrio+Norte/@-33.1316857,-59.3140357,604m/data=!3m2!1e3!4b1!4m6!3m5!1s0x95b09b6975738951:0xe46c15d507305fe1!8m2!3d-33.1316857!4d-59.3140357!16s%2Fg%2F11fxb0mb8m?entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="contacto-enlace">
+                        <img src="img/ubicacion-logo.png" alt="Ubicación Club" class="contacto-icono">
+                        San Martín y Padre A. Calgaro
+                    </a>
+                </p>
+                <p>
+                    <a href="https://wa.me/5493444123456" target="_blank" class="contacto-enlace">
+                        <img src="img/telefono-logo.png" alt="Teléfono Club" class="contacto-icono">
+                        +54 9 3444-427951
+                    </a>
+                </p>
+                <p>
+                    <a href="mailto:barrionorte@gmail.com" class="contacto-enlace">
+                        <img src="img/mail-logo.png" alt="Email Club" class="contacto-icono">
+                        barrionorte@gmail.com
+                    </a>
+                </p>
+            </div>
+            <!-- Sección de Sponsors -->
+            <div class="footer-sponsors">
+                <h3>Agradecimiento a nuestros sponsors <span class="sumate-texto">¡sumate a ellos!</span></h3>
+                <div class="sponsors-grid">
+                    <a href="https://kionstore.com.ar/" target="_blank">
+                        <img src="img/Kion25.png">
+                    </a>  
+                    <a href="https://www.instagram.com/planeta_futbollg/" target="_blank">
+                        <img src="img/Planeta Futbol.png">
+                    </a>
+                    <a href="https://www.instagram.com/pintureriascalcagno/" target="_blank">
+                        <img src="img/Pinturería Calcagno.png">
+                    </a>
+                    <a href="https://www.instagram.com/labarracamateriales/" target="_blank">
+                        <img src="img/La Barraca.png">
+                    </a>
+                    <a href="https://www.instagram.com/imperiales.l.a/" target="_blank"> 
+                        <img src="img/Imperiales LA.png">
+                    </a>
+                </div>
+            </div>
+            <!-- Redes Sociales -->
+            <div class="footer-social">
+                <h3>Nuestras redes sociales</h3>
+                <div class="social-grid">
+                    <a href="https://www.facebook.com/p/Club-Atletico-Barrio-Norte-Gualeguay-100063591160216/?locale=es_LA" class="social-icon" target="_blank">
+                        <img src="img/facebook-logo.png">
+                    </a>
+                    <a href="https://www.instagram.com/barrionortegualeguay/" class="social-icon" target="_blank">
+                        <img src="img/instagram-logo.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2025 Club Atlético Barrio Norte - Todos los derechos reservados</p>
+    </footer>
+    
+    
+</body>
+</html>

@@ -1,0 +1,391 @@
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
+}
+.inicio{
+    margin-top: 20px;
+    text-align: center;
+}
+
+#bienvenido{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #1b1b1b;
+    letter-spacing: inherit;
+    text-align: center;
+}
+
+#texto {
+    position: relative;
+    text-align: center;
+    padding: 0px 250px 20px; /* Agrega padding arriba */
+    color: #D32F2F;
+    font-weight: bold;
+}
+
+/* Ajustar el contenedor del slider */
+.slider-box {
+  width: 100%;           /* Ocupa todo el ancho disponible */
+  aspect-ratio: 11 / 1;  /* Altura = ancho ÷ 11 */
+  overflow: hidden;      /* Recorta el exceso si las imágenes tuvieran otro ratio */
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.slider-box ul {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.slider-box li {
+  flex: 0 0 100%;        /* Cada slide ocupa el 100% del ancho */
+  position: relative;
+}
+
+.slider-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* Rellena todo el contenedor manteniendo proporción */
+}
+
+/* Botones centrados dentro de cada slide */
+.slider-box .btn-socio,
+.slider-box .btn-tienda {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+/* Efecto al pasar el mouse */
+.btn-socio:hover, .btn-tienda:hover {
+    background-color: #B71C1C;
+}
+
+/* Efecto al presionar */
+.btn-socio:active, .btn-tienda:active {
+    background-color: #D32F2F;
+}
+
+.btn-tienda{
+    transform: translate(325%); /* Centra el botón completamente */
+}
+
+/* Contenedor padre para agrupar noticias y tabla */
+.padre-container {
+  display: grid;
+  grid-template-columns: 2.95fr 1fr;  /* Dos columnas iguales en ancho */
+  grid-template-rows: auto auto; /* Dos filas: altura automática y resto del espacio */
+  align-items: start;
+  margin-bottom: 25px;
+}
+
+.noticias-container{
+  grid-column: 1;
+  grid-row: 1; /* Primera fila */
+  padding: 0px 20px;
+  border-radius: 16px;
+  height: fit-content; /* Solo el espacio necesario */
+}
+
+/* Estilos para cada tarjeta de Noticia */
+.noticia {
+  display: grid;
+  grid-template-columns: 160px 1fr auto;
+  background-color: #eeeeee;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  align-items: center;
+  transition: transform 0.2s ease;
+  min-height: 130px; /* Altura mínima uniforme */
+
+}
+
+.noticia:hover {
+  transform: scale(1.01);
+}
+
+.noticia img {
+  grid-column: 1;
+  width: 160px;        /* Ancho fijo */
+  height: 100px;       /* Altura fija */
+  object-fit: cover;   /* Recorta o agranda manteniendo proporciones sin deformar */
+  border-radius: 8px 0 0 8px;
+}
+
+.noticia-contenido {
+  grid-column: 2;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.noticia-contenido h3{
+  font-size: 1.2rem;
+  color: #1b1b1b;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.noticia-contenido h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #D32F2F;
+}
+
+.noticia-contenido p {
+  margin: 6px 0;
+  font-size: 0.9rem;
+  color: #1b1b1b;
+}
+
+#ultimas-noticias{
+  font-size: 1.3rem;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.leer-mas {
+  align-self: flex-start;
+  text-decoration: none;
+  color: #D32F2F;
+  font-weight: bold;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  transition: color 0.3s;
+}
+
+.leer-mas:hover {
+  color: #B71C1C;
+}
+
+/* Contenedor de etiquetas */
+.noticia-etiquetas {
+  grid-column: 3; 
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: flex-end;
+  align-self: self-start;
+  padding: 0 10px; /* Espaciado interno */
+  margin-top: 20px;
+}
+
+/* Estilo para cada etiqueta */
+.noticia-etiqueta {
+  background-color: #D32F2F; /* Fondo rojo */
+  color: #fff; /* Texto blanco */
+  padding: 5px 10px; /* Espaciado interno */
+  border-radius: 12px; /* Bordes redondeados */
+  font-size: 0.8rem; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+.tabla-container {
+  grid-column: 2; /* Forzar posición en segunda columna */
+  grid-row: 1 / span 2; /* Ocupa ambas filas */
+  width: 100%;
+  max-width: 320px; 
+  justify-self: end;
+  margin-right: 20px;
+}
+
+.tabla-clasificacion-wrapper {
+  width: 100%; /* achicada un poco más */
+  padding: 12px;
+  background-color: #eeeeee;
+  border-radius: 12px;
+}
+
+.tabla-container h3 {
+  text-align: center;
+  color: #1b1b1b;
+  font-size: 1rem;
+}
+
+.tabla-clasificacion {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.tabla-clasificacion th,
+.tabla-clasificacion td {
+  padding: 3px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.tabla-clasificacion th:nth-child(3),
+.tabla-clasificacion td:nth-child(3) {
+  text-align: left;
+  width: 110px;
+}
+
+#Equipo{
+    text-align: center;
+}
+
+.logo-equipo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.posicion {
+  font-weight: bold;
+  padding: 3px 6px;
+  border-radius: 50px;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+/* Add dynamic styles for positions */
+tbody tr:nth-child(-n+3) .posicion {
+  background-color: #4CAF50; /* Green for top 3 positions */
+}
+
+tbody tr:nth-child(n+4):nth-child(-n+7) .posicion {
+  background-color: #FFC107; /* Yellow for positions 4 to 6 */
+}
+
+.scroll-container {
+  grid-column: 1;
+  grid-row: 2;
+  border-radius: 12px;
+  overflow: hidden; /* Oculta el desbordamiento */
+}
+
+.scroll-track {
+  display: flex;
+  width: calc(150px * 7); /* Ancho según contenido */
+  animation: scroll 20s linear infinite; /* Animación infinita */
+}
+
+.scroll {
+  flex: 0 0 150px; /* Ancho fijo de cada imagen */
+  padding: 0 10px; /* Espacio entre imágenes */
+}
+
+.scroll img {
+  width: 100%;
+  height: 80px; /* Altura fija para uniformidad */
+  object-fit: contain;
+  transition: 10.s;
+}
+
+.promo-partido {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+  width: 100%;
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 20px auto; /* Centra el contenedor en la página */
+}
+
+.promo-partido img {
+  width: 100%;
+  height: auto; /* Mantiene las proporciones de la imagen */
+  border-radius: 25px; /* Bordes redondeados */
+  object-fit: contain; /* Asegura que la imagen no se deforme */
+}
+
+.imagen-bono {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.img-bono {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+}
+
+.img-bono:hover {
+  opacity: 0.95; /* Ajusta la opacidad de la imagen */
+}
+
+/* Ajustar la animación para 7 elementos */
+@keyframes scroll {
+  0% { transform: translateX(0) }
+  100% { transform: translateX(calc(-150px * 7)) } /* 200px * número de imágenes */
+}
+
+@media (max-width: 768px) {
+    .slider-box {
+        height: auto;  /* Permite que la imagen se ajuste mejor */
+    }
+
+    .slider-box img {
+        object-fit: contain;  /* En pantallas pequeñas, muestra toda la imagen */
+    }
+}
+
+@media (max-width: 430px) {
+    .inicio {
+        margin-top: 10px;
+    }
+
+    #bienvenido {
+        font-size: 1.2rem; /* Reduce el tamaño del texto */
+    }
+
+    #texto {
+        padding: 0 20px; /* Reduce el padding */
+    }
+
+    .slider-box {
+        height: auto; /* Permite que las imágenes se ajusten */
+    }
+
+    .slider-box img {
+        object-fit: contain; /* Asegura que las imágenes no se deformen */
+    }
+
+    .btn-socio, .btn-tienda {
+        font-size: 1rem; /* Reduce el tamaño del texto del botón */
+        padding: 10px 20px;
+    }
+
+    .padre-container {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+
+    .tabla-container {
+        max-width: 100%; /* Ajusta el ancho de la tabla */
+        margin: 0 auto; /* Centra la tabla */
+    }
+
+    .tabla-clasificacion th, .tabla-clasificacion td {
+        font-size: 0.75rem; /* Reduce el tamaño del texto en la tabla */
+    }
+
+    .imagen-bono img {
+        max-width: 100%; /* Asegura que la imagen no se desborde */
+    }
+
+    .promo-partido {
+        height: auto;
+        padding: 10px;
+        background-size: cover; /* Ajusta el fondo */
+    }
+}

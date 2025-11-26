@@ -1,0 +1,172 @@
+[
+  {
+    "id": "1",
+    "titulo": "Roberto Paz es campeón",
+    "fecha": "2025-03-18",
+    "autor": "Juan Martín Cosso",
+    "imagen": "img_noticias/RobertoPaz_campeón.webp",
+    "resumen": "Finalizó el torneo comercial organizado por la subcomisión de bochas del club.",
+    "etiqueta_1": ["Bochas"],
+    "etiqueta_2": ["Torneo"]
+  },
+  {
+    "id": "2",
+    "titulo": "Gracias Carnaval de Gualeguay 2025",
+    "fecha": "2025-03-06",
+    "autor": "Juan Martín Cosso",
+    "imagen": "img_noticias/SambaVera_despedida_2025.jpg",
+    "resumen": "Cerramos esta temporada con destacados premios individuales, conocelos.",
+    "etiqueta_1": ["Samba Verá"],
+    "etiqueta_2": ["Club"]
+  },
+  {
+    "id": "3",
+    "titulo": "Inauguración de la nueva cantina",
+    "fecha": "2025-04-03",
+    "autor": "Juan Martín Cosso",
+    "imagen": "img_noticias/cantina_inauguracion.webp",
+    "resumen": "El domingo 6 de Abril inauguramos la nueva súper cantina del club.",
+    "etiqueta_1": ["Cantina"],
+    "etiqueta_2": ["Club"]
+  },
+  {
+    "id": "4",
+    "titulo": "A la venta nuestro bono contribución",
+    "fecha": "2025-01-21",
+    "autor": "Juan Martín Cosso",
+    "imagen": "img_noticias/bono_contribucion.png",
+    "resumen": "Ya salió a circulación nuestro bono contribución, todavía no tenes el tuyo, escribimos y te enviamos un vendedor.",
+    "etiqueta_1": ["Club"],
+    "etiqueta_2": ["Socios"]
+  },
+  {
+    "id": "5",
+    "titulo": "Te presentamos a nuestro equipo de fútbol femenino",
+    "fecha": "2025-04-17",
+    "autor": "Juan Martín Cosso",
+    "imagen": "img_noticias/femenino_presentacion.webp",
+    "resumen": "Las jugadoras nos van a representar en la Liga Departamental.",
+    "etiqueta_1": ["Fútbol"],
+    "etiqueta_2": ["Femenino"]
+  },
+  {
+    "id": "6",
+    "titulo": "Conocé la nueva piel del norte",
+    "fecha": "2025-02-24",
+    "autor": "Juan Martín Cosso",
+    "imagen": "img_noticias/camiseta_2025_titular.png",
+    "resumen": "Se presentó la nueva camiseta oficial del club para la temporada 2025, se utilizará en el masculino e inferiores.",
+    "etiqueta_1": ["Fútbol"],
+    "etiqueta_2": ["Socios"]
+  },
+  {
+    "id": "7",
+    "titulo": "Debut ganador para el norte",
+    "fecha": "2025-04-07",
+    "autor": "Juan Martín Cosso",
+    "imagen": "img_noticias/fecha1_masc.webp",
+    "resumen": "El norte arrancó el año con una victoria ante Bancario, con dos goles de Gabriel Albornoz.",
+    "etiqueta_1": ["Fútbol"],
+    "etiqueta_2": ["Masculino"]
+  },
+  {
+    "id": "8",
+    "titulo": "Derrota de local ante La Academia",
+    "fecha": "2025-04-14",
+    "autor": "Juan Martín Cosso",
+    "imagen": "img_noticias/fecha2_masc.webp",
+    "resumen": "Derrota para un Barrio Norte que fue menos ante el conjunto galarceño.",
+    "etiqueta_1": ["Fútbol"],
+    "etiqueta_2": ["Masculino"]
+  },
+  {
+    "id": "9",
+    "titulo": "Fue derrota en el sur",
+    "fecha": "2025-04-20",
+    "autor": "Juan Martín Cosso",
+    "imagen": "img_noticias/fecha3_masc.jpg",
+    "resumen": "El equipo masculino de Barrio Norte perdió 3 a 1 frente a Urquiza de visitante.",
+    "etiqueta_1": ["Fútbol"],
+    "etiqueta_2": ["Masculino"]
+  },
+  {
+    "id": "10",
+    "titulo": "Las chicas sumaron de a tres",
+    "fecha": "2025-04-07",
+    "autor": "Juan Martín Cosso",
+    "imagen": "img_noticias/fecha1_fem.webp",
+    "resumen": "Las norteñas arrancaron el año de buena manera ganando 2 a 0 contra Bancario.",
+    "etiqueta_1": ["Fútbol"],
+    "etiqueta_2": ["Femenino"]
+  },
+  {
+    "id": "11",
+    "titulo": "Empate con poco gusto contra la Aldea",
+    "fecha": "2025-04-14",
+    "autor": "Juan Martín Cosso",
+    "imagen": "img_noticias/fecha2_fem.webp",
+    "resumen": "En un partido trabado, nuestras jugadoras sumaron un punto tras un empate a cero.",
+    "etiqueta_1": ["Fútbol"],
+    "etiqueta_2": ["Femenino"]
+  },
+  {
+    "id": "12",
+    "titulo": "Derrota de las norteñas",
+    "fecha": "2025-04-20",
+    "autor": "Juan Martín Cosso",
+    "imagen": "img_noticias/fecha3_fem.webp",
+    "resumen": "Por la mínima, Urquiza se impuso ante el femenino de Barrio Norte.",
+    "etiqueta_1": ["Fútbol"],
+    "etiqueta_2": ["Femenino"]
+  },
+  {
+    "id": "13",
+    "titulo": "El norte vuelve a la victoria",
+    "fecha": "2025-04-27",
+    "autor": "Juan Martín Cosso",
+    "imagen": "img_noticias/fecha4_masc.webp",
+    "resumen": "Barrio Norte se impuso de local por la mínima contra Gualeguay Central.",
+    "etiqueta_1": ["Fútbol"],
+    "etiqueta_2": ["Masculino"]
+  },
+  {
+    "id": "14",
+    "titulo": "Mala racha para nuestras chicas",
+    "fecha": "2025-04-27",
+    "autor": "Juan Martín Cosso",
+    "imagen": "img_noticias/fecha4_fem.webp",
+    "resumen": "De local las norteñas no pudieron contra Central, el gol lo hizo Luz Rivero.",
+    "etiqueta_1": ["Fútbol"],
+    "etiqueta_2": ["Femenino"]
+  },
+  {
+    "id": "15",
+    "titulo": "Dura derrota para Barrio Norte",
+    "fecha": "2025-05-04",
+    "autor": "Juan Martín Cosso",
+    "imagen": "img_noticias/fecha5_masc.webp",
+    "resumen": "Barrio Norte perdió 3 a 0 contra Sociedad Sportiva en el estadio Hermanos Romasanta.",
+    "etiqueta_1": ["Fútbol"],
+    "etiqueta_2": ["Masculino"]
+  },
+  {
+    "id": "16",
+    "titulo": "Empate en cancha de Sportiva",
+    "fecha": "2025-05-04",
+    "autor": "Juan Martín Cosso",
+    "imagen": "img_noticias/fecha5_fem.webp",
+    "resumen": "Igualdad en 1 para las norteñas en vísperas del clásico con Libertad.",
+    "etiqueta_1": ["Fútbol"],
+    "etiqueta_2": ["Femenino"]
+  },
+  {
+    "id": "17",
+    "titulo": "Empate en cancha de Sportiva",
+    "fecha": "2025-05-22",
+    "autor": "Juan Martín Cosso",
+    "imagen": "img_noticias/fecha6_masc.jpg",
+    "resumen": "Igualdad en 1 para las norteñas en vísperas del clásico con Libertad.",
+    "etiqueta_1": ["Fútbol"],
+    "etiqueta_2": ["Masculino"]
+  }
+]

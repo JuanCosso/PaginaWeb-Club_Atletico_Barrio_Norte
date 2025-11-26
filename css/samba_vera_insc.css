@@ -1,0 +1,51 @@
+.titulo-container {
+    text-align: center;
+    grid-row: 1;
+    margin: 20px 0;
+}  
+.titulo-container h2{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #1b1b1b;
+}
+.titulo-container p{
+    color: #D32F2F;
+    font-weight: bold;
+}
+
+.promocion-simple {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.promocion-simple p {
+    font-size: 1.1rem;
+    color: #1b1b1b;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.promocion-simple p:first-child {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #D32F2F;
+}
+
+.btn-inscripcion {
+    display: inline-block;
+    background: #D32F2F;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-inscripcion:hover {
+    background: #B71C1C;
+}

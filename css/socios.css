@@ -1,0 +1,371 @@
+.titulo-container {
+    text-align: center;
+    grid-row: 1;
+      margin: 20px 0;
+}
+  
+.titulo-container h2{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #1b1b1b;
+}
+  
+.titulo-container p{
+    color: #D32F2F;
+    font-weight: bold;
+}
+
+.formulario-socios {
+    text-align: center;
+    padding: 50px 20px;
+    color: #303030;
+}
+
+.formulario-socios h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #D32F2F;
+    margin-bottom: 10px;
+}
+
+.formulario-socios p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Botón */
+.btn-enviar {
+    padding: 12px 25px;
+    background-color: #D32F2F;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-enviar:hover {
+    background-color: #B71C1C;
+}
+
+/* Estilos para la sección de planes */
+.planes-membresia {
+    padding: 0px 20px;
+    padding-bottom: 100px;
+}
+
+.planes-membresia h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #D32F2F;
+    margin-bottom: 30px;
+}
+
+.planes-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.plan {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.plan:hover {
+    transform: translateY(-5px);
+}
+
+.plan h3 {
+    color: #D32F2F;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+    min-height: 3rem;
+}
+
+.precio {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #303030;
+    text-align: center;
+    margin-bottom: 20px;
+    min-height: 3rem;
+}
+
+.beneficios {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.beneficios li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 25px;
+}
+
+.beneficios li:before {
+    content: "✓";
+    color: #D32F2F;
+    position: absolute;
+    left: 0;
+}
+
+.beneficios li.sin-beneficio:before {
+    content: "✗";
+    color: #D32F2F;
+    position: absolute;
+    left: 0;
+}
+
+.disclaimer {
+    font-size: 0.8rem;
+    color: #666;
+    font-style: italic;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #D32F2F;
+    line-height: 1.4;
+}
+
+.detalles-pago {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.detalles-pago p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.contacto {
+    text-align: center;
+    font-weight: bold;
+    color: #D32F2F;
+    margin: 15px 0;
+    min-height: 2rem;
+}
+
+.plan.selected {
+    border: 2px solid #D32F2F;
+    transform: scale(1.05);
+}
+
+.plan.selected:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.btn-adquirir {
+    width: 100%;
+    padding: 12px 25px;
+    background-color: #D32F2F;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    display: block;
+    margin-top: auto;
+}
+
+.btn-adquirir:hover {
+    background-color: #B71C1C;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .planes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .plan {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .plan.selected {
+        transform: scale(1);
+    }
+    
+    .plan.selected:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.agradecimiento {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background: #D32F2F;
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.agradecimiento p {
+    color: #F8F8F8;
+    font-family: "Hurricane", cursive;
+    font-size: 5.5rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .agradecimiento p {
+        font-size: 1.3rem;
+    }
+}
+
+.socios-formulario-contenedor {
+    display: flex;
+    background: linear-gradient(#D32F2F 0%, #B71C1C 100%);
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0;
+    margin: 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 0 0 40px 0;
+    box-sizing: border-box;
+}
+
+.socios-lado {
+    width: 220px;
+    background: transparent;
+    border-radius: 0;
+    padding: 30px 0 30px 0;
+    box-shadow: none;
+    font-size: 1.05rem;
+    color: #F8F8F8;
+    font-weight: bold;
+    min-height: 420px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.socios-izquierda {
+    margin-left: 40px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.socios-derecha {
+    margin-right: 40px;
+}
+
+.socios-izquierda ul {
+    text-align: left;
+    width: 100%;
+    list-style: none;
+}
+
+.socios-derecha ul {
+    text-align: right;
+    width: 100%;
+    list-style: none;
+}
+
+.socios-lado li {
+    margin: 18px 0;
+}
+
+.formulario-centro {
+    flex: 1 1 400px;
+    max-width: 500px;
+    background: #F8F8F8;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 40px 30px;
+    margin: 0 20px;
+}
+
+@media (max-width: 1200px) {
+    .socios-lado {
+        width: 140px;
+    }
+    .socios-izquierda {
+        margin-left: 10px;
+    }
+    .socios-derecha {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 900px) {
+    .socios-formulario-contenedor {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        padding: 0 0 20px 0;
+    }
+    .socios-lado {
+        width: 100%;
+        min-height: unset;
+        margin-bottom: 10px;
+        align-items: center;
+        justify-content: center;
+        color: #D32F2F;
+    }
+    .socios-izquierda, .socios-derecha {
+        margin: 0;
+    }
+    .socios-izquierda ul, .socios-derecha ul {
+        text-align: center;
+    }
+    .formulario-centro {
+        max-width: 100%;
+        margin: 0;
+        padding: 30px 10px;
+    }
+}

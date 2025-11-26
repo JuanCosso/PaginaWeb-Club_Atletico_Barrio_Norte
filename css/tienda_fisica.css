@@ -1,0 +1,12 @@
+div{
+    color: #1b1b1b;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 2.2rem;
+    margin: 20px;
+}
+.texto{
+    margin-bottom: 10px;
+}

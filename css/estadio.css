@@ -1,0 +1,186 @@
+.titulo-container {
+    text-align: center;
+    grid-row: 1;
+    margin: 20px 0;
+}  
+.titulo-container h2{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #1b1b1b;
+}
+.titulo-container p{
+    color: #D32F2F;
+    font-weight: bold;
+}
+
+/* Tarjeta del estadio */
+.estadio-tarjeta {
+    display: flex;
+    max-width: 1100px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    border: 1px solid #e9ecef;
+}
+
+.estadio-foto {
+    flex: 1.5;
+    min-height: 450px;
+    position: relative;
+    overflow: hidden;
+}
+
+.estadio-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #f8f9fa;
+}
+
+.estadio-datos {
+    flex: 0.8;
+    padding: 30px;
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.estadio-datos h3 {
+    color: #D32F2F;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.datos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.dato {
+    padding: 8px 0;
+    border-bottom: 1px solid #dee2e6;
+    color: #333;
+    font-size: 1rem;
+}
+
+.dato:last-child {
+    border-bottom: none;
+}
+
+.dato strong {
+    color: #D32F2F;
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+/* Mapa de Google Maps */
+.mapa-seccion {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.mapa-container {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e9ecef;
+}
+
+/* Galería del estadio */
+.galeria-estadio {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.galeria-estadio h3 {
+    color: #1b1b1b;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.galeria-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.galeria-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .estadio-tarjeta {
+        flex-direction: column;
+        margin: 20px;
+        border-radius: 15px;
+    }
+    
+    .estadio-foto {
+        min-height: 300px;
+    }
+    
+    .estadio-datos {
+        padding: 25px;
+    }
+    
+    .estadio-datos h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .dato {
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+    
+    .mapa-seccion {
+        padding: 0 15px;
+    }
+    
+    .galeria-estadio {
+        padding: 0 15px;
+    }
+    
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .galeria-item img {
+        height: 200px;
+    }
+}

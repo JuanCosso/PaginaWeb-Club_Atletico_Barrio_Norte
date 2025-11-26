@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider con Botones</title>
+    <style>
+        .slider-box {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider-box ul {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .slider-box li {
+            min-width: 100%;
+        }
+
+        .slider-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .nav-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .nav-buttons button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-box" id="slider">
+        <ul>
+            <li><img src="img/Hinchas4.jpg" alt="Slide 1"></li>
+            <li><img src="img/Hinchas6.jpg" alt="Slide 2"></li>
+            <li><img src="img/Hinchas7.jpg" alt="Slide 3"></li>
+        </ul>
+        <div class="nav-buttons">
+            <button id="prev">Anterior</button>
+            <button id="next">Siguiente</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const slider = document.querySelector("#slider ul");
+            const slides = document.querySelectorAll("#slider li");
+            let currentIndex = 0;
+            const slideCount = slides.length;
+
+            function showSlide(index) {
+                slider.style.transform = `translateX(-${index * 100}%)`;
+            }
+
+            document.querySelector("#prev").addEventListener("click", () => {
+                currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+                showSlide(currentIndex);
+            });
+
+            document.querySelector("#next").addEventListener("click", () => {
+                currentIndex = (currentIndex + 1) % slideCount;
+                showSlide(currentIndex);
+            });
+        });
+    </script>
+</body>
+</html>

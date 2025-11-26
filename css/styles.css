@@ -1,0 +1,696 @@
+/* Definimos la paleta de colores basada en el escudo del club */
+:root {
+    --primary-color: #D32F2F; /* Rojo principal del escudo */
+    --secondary-color: #FFFFFF; /* Blanco */
+    --text-color: #1b1b1b; /* Gris oscuro para el texto */
+    --accent-color: #B71C1C; /* Rojo oscuro */
+    --background-color: #F8F8F8; /* Fondo claro */
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F8F8F8;
+    color: #1b1b1b; /* Color del texto, luego en cada sección, se puede modificar */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #D32F2F;
+    color: #F8F8F8; /* Color del texto */
+    padding: 1rem 0;
+    text-align: center;
+    position: relative; /* Necesario para posicionar la capa de color y la imagen */
+
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/BN-Campeon.png') center/cover no-repeat; /* Ruta de la imagen */
+    opacity: 0.3; /* Ajusta la opacidad de la imagen */
+    z-index: 1;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(211, 47, 47, 0.5); /* Capa de color semitransparente */
+    z-index: 2;
+}
+
+header h1, nav {
+    position: relative;
+    z-index: 3; /* Asegura que el texto y la navegación queden por encima */
+}
+
+h1 { /* Con esto solo le damos estilo al nombre del club */
+    font-family: "Hurricane", cursive;
+    font-size: 5.0rem;
+    font-weight: normal;
+    color: #F8F8F8;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: -1.5px;
+    word-wrap: break-word;
+}
+#escudo img{
+    position: absolute;
+    top: 130px;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 200px;
+}
+
+/* Barra de navegación */
+nav{
+    display: flex;
+    justify-content: center; /* Centra los elementos en la pantalla */
+    width: 100%;
+}
+nav ul{ /*Le da estilo a los ul dentro de los nav*/
+    list-style: none;
+    display: flex;
+    width: 65%;
+    margin: 0 auto;
+    padding: 0;
+}
+nav ul li{
+    flex: 1;
+    position: relative;
+    text-align: center;
+}
+nav ul li a{ /*Le da estilo a los li dentro de ul y de nav, que son enlaces*/
+    color: #F8F8F8;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s ease-in-out;
+}
+nav ul li a:hover {
+    background: #B71C1C;
+}
+
+.dropdown .submenu {
+    display: none;             /* Oculta el submenú por defecto */
+    position: absolute;        /* Posiciona el submenú respecto al .dropdown */
+    width: 100%;               /* Ancho igual al botón padre ("Disciplinas") */
+    left: 0;                   /* Alineado a la izquierda del padre */
+    background-color:#D32F2F; /* Fondo rojo (puede cambiarse si querés) */
+    flex-direction: column;    /* Elementos apilados verticalmente */
+    z-index: 2;                /* Aparece por encima de otros elementos */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Sombra para profundidad */
+    border-radius: 0 0 8px 8px; /* Bordes inferiores redondeados */
+    list-style: none;          /* Quita bullets si usás <ul> */
+    overflow: hidden;          /* Oculta lo que se desborde del borde redondeado */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    transform: translateY(10px); /* Aparece con deslizamiento */
+    opacity: 0;                /* Inicialmente invisible */
+    visibility: hidden;        /* Evita clics mientras está oculto */
+}
+
+.dropdown > a {
+    padding: 10px 15px;        /* Espaciado del botón principal */
+    text-decoration: none;     /* Sin subrayado */
+    display: block;            /* Ocupa todo el ancho disponible */
+    transition: background-color 0.3s ease-in-out; /* Transición suave de color */
+}
+
+.dropdown:hover > a {
+    background-color: #B71C1C;
+}
+
+.dropdown:hover .submenu {
+    display: flex;             /* Muestra el submenú */
+    opacity: 1;                /* Lo hace visible */
+    visibility: visible;
+    transform: translateY(0px); /* Lo desliza hacia arriba */
+}
+
+.submenu li {
+    width: 100%;               /* Cada ítem ocupa todo el ancho del submenú */
+    margin: 0;                 /* Sin margen entre elementos */
+    padding: 0;                /* Sin relleno adicional entre elementos */
+    line-height: 1;            /* Elimina espaciado vertical heredado */
+}
+
+.submenu li a {
+    display: block;            /* Ocupa todo el ancho */
+    padding: 6px 10px;         /* ← ESTE valor es el que manipulás para separar verticalmente */
+    margin: 0;
+    font-size: 0.9rem;         /* Tamaño de texto */
+    color: #F8F8F8;            /* Texto blanco */
+    transition: background 0.2s ease-in-out;
+    text-decoration: none;
+    line-height: 1.2;          /* Altura de línea ajustada para reducir separación */
+}
+
+.submenu li a:hover {
+    background-color:#B71C1C;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background: #D32F2F;
+    margin-top: auto; /* Mantiene el footer pegado al fondo si el contenido es corto */
+}
+
+/*Contenedor de sponsors, contacto y social*/
+.footer-container {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 15px 0px;
+}
+
+/* Contenedor de sponsors */
+.footer-sponsors, .footer-contacto, .footer-social {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color:#1b1b1b;
+}
+
+.footer-contacto{
+    justify-content: baseline;
+    padding-left: 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    color:#1b1b1b;
+}
+
+.footer-sponsors{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.sumate-texto {
+    background-color: #B71C1C;
+    color: #F8F8F8;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.sponsors-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-grid{
+    display: flex;
+}
+
+.sponsors-grid img {
+    width: 120px; /* Tamaño uniforme */
+    height: 100px; /* Altura fija */
+    object-fit: contain; /* Mantiene proporciones sin recortar */
+    padding: 5px;
+    transition: filter 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.sponsors-grid img:hover {
+    filter: brightness(0%) contrast(100%);
+    transform: scale(1.1); /* Efecto de agrandado leve */
+}
+
+.footer-social{
+    align-items: center;
+    text-align: center;
+    justify-content: baseline;
+    font-size: 0.85rem;
+}
+
+.footer-social .social-icon{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px;
+}
+
+.footer-social img {
+    width: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-social img:hover {
+    filter: brightness(0%) contrast(100%);
+    transform: scale(1.1);
+}
+
+/* Copyright */
+.footer-copy {
+    background: #bd2a2a;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 5px 5px;
+    color:#1b1b1b;
+}
+
+.contacto-enlace{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    align-items: center;
+    gap: 10px;
+    color: #1b1b1b;
+    text-decoration: none;
+    margin: 5px 0;
+    width: 100%;
+    max-width: 280px;
+}
+
+.contacto-enlace:hover{
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.contacto-icono{
+    width: 25px;
+    height: 25px;
+    justify-self: center;
+}
+
+.footer-contacto p {
+    display: contents;
+}
+
+.footer-montanas {
+    position: relative;
+    width: 100%;
+    height: 110px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: transparent;
+}
+
+.montanas-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110px;
+    display: block;
+    z-index: 1;
+}
+
+.montanas-escudo {
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+    width: 90px;
+    height: auto;
+    z-index: 2;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.25));
+}
+
+.montanas-png {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Footer lema y escudo - SOLO ESCUDO Y PRIMER LEMA, AJUSTE FINAL */
+.footer-lema-bn {
+    background-color: #F8F8F8;
+    background-image: url('../img/footer.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 6px 10px 6px;
+    box-sizing: border-box;
+    gap: 18px;
+}
+.footer-lema-escudo {
+    width: 110px;
+    max-width: 22vw;
+    height: 110px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.18));
+}
+.footer-lema-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #F8F8F8;
+    letter-spacing: 0.5px;
+    height: 110px;
+    margin-left: 18px;
+    line-height: 1;
+}
+.footer-lema-cada {
+    margin-bottom: -0.78em;
+}
+.footer-lema-masgrande {
+    font-size: 2.6rem;
+    margin-top: 0;
+}
+.footer-lema-curva {
+    width: 100%;
+    line-height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.footer-lema-curva svg {
+    display: block;
+    width: 100%;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+}
+@media (max-width: 900px) {
+    .footer-lema-bn {
+        flex-direction: column;
+        gap: 12px;
+        padding: 18px 5px 10px 5px;
+    }
+    .footer-lema-escudo {
+        width: 70px;
+        height: 70px;
+    }
+    .footer-lema-principal {
+        font-size: 1.3rem;
+        height: 70px;
+        margin-left: 0;
+    }
+    .footer-lema-masgrande {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-lema-escudo {
+        width: 48px;
+    }
+    .footer-lema-principal {
+        font-size: 1.2rem;
+    }
+    .footer-lema-secundario {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header responsive */
+    header{
+        max-height: 140px;
+    }
+
+    .movil-container {
+        display: grid;
+        grid-template-columns: auto 1fr; /* Dos columnas para el escudo y el texto */
+    }
+
+    #escudo img {
+        grid-column: 1;
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        align-items: center;
+        width: 60px;
+        height: auto; /* Mantiene la proporción de la imagen */
+        margin-left: 40px;
+    }
+
+    h1 {
+        grid-column: 2;
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-right: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Nav responsive */
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+    
+      nav ul {
+        display: flex;
+        flex-wrap: wrap;       /* permite varias “líneas” dentro del ul */
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        width: 100%;
+      }
+    
+      nav ul li:nth-child(-n+2) {
+        flex: 1 1 50%;
+        text-align: center;
+      }
+    
+      /* Los restantes cinco: comparten la siguiente línea, repartiéndose el ancho */
+      nav ul li:nth-child(n+3) {
+        flex: 1 1 0;
+        text-align: center;
+        
+      }
+    
+      /* Estilo de los enlaces */
+      nav ul li a {
+        display: block;
+        padding: 3px 5px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: #F8F8F8;
+        transition: background 0.3s ease-in-out;
+        width: 100%;
+      }
+      nav ul li a:hover {
+        background: #B71C1C;
+      }
+    
+
+    /* Ajustes para el dropdown */
+    .dropdown .submenu {
+        position: absolute;
+        top: 100%; /* Asegura que el submenú aparezca debajo del elemento padre */
+        left: 0;
+        width: 100%; /* Asegura que el submenú ocupe todo el ancho del elemento padre */
+        display: none; /* Oculta el submenú por defecto */
+        background-color: #D32F2F;
+        flex-direction: column;
+        z-index: 2;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        border-radius: 0 0 8px 8px;
+        list-style: none;          
+        overflow: hidden;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        transform: translateY(10px);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .dropdown:hover .submenu {
+        display: flex; /* Muestra el submenú */
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+    }
+
+    .submenu li {
+        width: 100%; /* Cada ítem ocupa todo el ancho del submenú */
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+    }
+
+    .submenu li a {
+        display: block;
+        padding: 5px 8px;
+        font-size: 0.8rem;
+        color: #F8F8F8;
+        text-decoration: none;
+        transition: background 0.2s ease-in-out;
+        width: 100%; /* Asegura que el enlace ocupe todo el ancho del submenú */
+    }
+
+    .submenu li a:hover {
+        background-color: #B71C1C;
+    }
+
+    /* Footer responsive */
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px 15px;
+    }
+
+    .footer-contacto {
+        padding-left: 0;
+        order: 2;
+    }
+
+    .sponsors-grid img {
+        width: 80px;
+        height: 60px;
+    }
+
+    .footer-social img {
+        width: 25px;
+    }
+
+    .social-grid {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .footer-copy {
+        font-size: 0.8rem;
+        padding: 8px 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    #escudo img {
+        width: 50px;
+    }
+
+
+
+    .sponsors-grid {
+        gap: 8px;
+    }
+
+    .sponsors-grid img {
+        width: 70px;
+        height: 50px;
+    }
+}
+
+/* Barra de navegación 
+/* Barra de navegación */
+/*
+nav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+nav ul{ 
+    list-style: none;
+    display: flex;
+    width: 65%;
+    margin: 0 auto;
+    padding: 0;
+}
+nav ul li{
+    flex: 1;
+    position: relative;
+    text-align: center;
+}
+nav ul li a{ 
+    color: #F8F8F8;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s ease-in-out;
+}
+nav ul li a:hover {
+    background: #B71C1C;
+}
+
+.dropdown .submenu {
+    display: none;             
+    position: absolute;        
+    width: 100%;               
+    left: 0;                   
+    background-color:#D32F2F; 
+    flex-direction: column;    
+    z-index: 2;                
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-radius: 0 0 8px 8px; 
+    list-style: none;          
+    overflow: hidden;         
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+    transform: translateY(10px); 
+    opacity: 0;                
+    visibility: hidden;       
+}
+
+.dropdown > a {
+    padding: 10px 15px;        
+    text-decoration: none;     
+    display: block;            
+    transition: background-color 0.3s ease-in-out; 
+}
+
+.dropdown:hover > a {
+    background-color: #B71C1C;
+}
+
+.dropdown:hover .submenu {
+    display: flex;             
+    opacity: 1;               
+    visibility: visible;
+    transform: translateY(0px); 
+}
+
+.submenu li {
+    width: 100%;              
+    margin: 0;                 
+    padding: 0;                
+    line-height: 1;            
+}
+
+.submenu li a {
+    display: block;            
+    padding: 6px 10px;         
+    margin: 0;
+    font-size: 0.9rem;         
+    color: #F8F8F8;           
+    transition: background 0.2s ease-in-out;
+    text-decoration: none;
+    line-height: 1.2;          
+}
+
+.submenu li a:hover {
+    background-color:#B71C1C;
+}}*/

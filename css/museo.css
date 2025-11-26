@@ -1,0 +1,437 @@
+/*=====================================================
+   Variables de color del Club
+=====================================================*/
+:root {
+  --color-primary: #D32F2F;    /* Rojo vivo */
+  --color-secondary: #B71C1C;  /* Rojo oscuro */
+  --color-bg: #F8F8F8;         /* Fondo claro */
+  --color-text: #1B1B1B;       /* Texto oscuro */
+}
+
+.titulo-container {
+  text-align: center;
+  grid-row: 1;
+  margin: 20px 0;
+}
+
+.titulo-container h2{
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #1b1b1b;
+}
+
+.titulo-container p{
+  color: #D32F2F;
+  font-weight: bold;
+}
+
+/*=====================================================
+   Contenedor Principal
+=====================================================*/
+.museo-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #eee;
+  color: var(--color-text);
+}
+
+/*=====================================================
+   Sección Camisetas por Década
+=====================================================*/
+.decada-section {
+  margin-bottom: 40px;
+}
+
+.decada-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--color-primary);
+}
+
+.decada-section .section-subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+/* Contenedor del slider */
+.slider-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px 0;
+}
+
+.slider-box {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  background-color: #FFFFFF;
+  border: 2px solid var(--color-secondary);
+  border-radius: 8px;
+}
+
+.slider-box ul {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  height: 100%;
+}
+
+.slider-box li {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.slider-box img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.camiseta-caption {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.nav-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 20px;
+  z-index: 10;
+}
+
+.nav-buttons button {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  opacity: 0.8;
+}
+
+.nav-buttons button:hover {
+  background-color: var(--color-secondary);
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slider-box {
+    height: 300px;
+  }
+  
+  .slider-box img {
+    max-height: 200px;
+  }
+}
+
+/*=====================================================
+   Sección Camisetas
+=====================================================*/
+.camisetas-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--color-primary);
+}
+
+.camisetas-section .section-subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+/* Galería de camisetas: 5 por fila */
+.camisetas-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Cada item de camiseta */
+.camiseta-item {
+  background-color: #FFFFFF;
+  border: 2px solid var(--color-secondary);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.camiseta-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.camiseta-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background-color: var(--color-bg);
+}
+
+.camiseta-caption {
+  padding: 10px;
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+/* Responsive: adapta para pantallas más pequeñas */
+@media (max-width: 1024px) {
+  .camisetas-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .camisetas-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*=====================================================
+   Sección Trofeos
+=====================================================*/
+.trofeos-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--color-secondary);
+}
+
+.trofeos-section .section-subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.trofeos-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.trofeo-item {
+  background-color: #FFFFFF;
+  border: 2px solid var(--color-secondary);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trofeo-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.trofeo-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.trofeo-caption {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-secondary);
+}
+
+/*=====================================================
+   Sección Escudos Históricos
+=====================================================*/
+.escudos-section {
+  background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+  padding: 40px 20px;
+  margin-bottom: 50px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.escudos-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.escudos-section h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: var(--color-primary);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.escudos-divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  margin: 0 auto 20px;
+  border-radius: 2px;
+}
+
+.escudos-section .section-subtitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  color: var(--color-text);
+  font-style: italic;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.escudos-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.escudo-item {
+  background: linear-gradient(145deg, #ffffff 0%, #f8f8f8 100%);
+  border: 3px solid var(--color-secondary);
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  padding: 25px 15px;
+  transition: all 0.4s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.escudo-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.escudo-item:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  border-color: var(--color-primary);
+}
+
+.escudo-item:hover::before {
+  opacity: 1;
+}
+
+.escudo-image-container {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: radial-gradient(circle, #ffffff 0%, #f0f0f0 100%);
+  border-radius: 10px;
+  border: 2px solid #e0e0e0;
+}
+
+.escudo-item img {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+  transition: transform 0.3s ease;
+}
+
+.escudo-item:hover img {
+  transform: scale(1.1);
+}
+
+.escudo-caption {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-bg) 0%, #ffffff 100%);
+  padding: 12px 8px;
+  border-radius: 8px;
+  border: 2px solid var(--color-secondary);
+  margin-bottom: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.escudo-period {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* Responsive para escudos */
+@media (max-width: 1200px) {
+  .escudos-gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .escudos-section {
+    padding: 30px 15px;
+  }
+  
+  .escudos-section h2 {
+    font-size: 2.2rem;
+  }
+  
+  .escudos-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .escudo-item {
+    padding: 20px 10px;
+  }
+  
+  .escudo-item img {
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .escudos-gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .escudo-item img {
+    max-width: 120px;
+  }
+}

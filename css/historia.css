@@ -1,0 +1,672 @@
+/* Estilos generales */
+
+.titulo-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 20px 0;
+  }
+
+/* Título container - idéntico al de noticias */
+.titulo-container {
+    text-align: center;
+    grid-row: 1;
+}
+
+.titulo-container h2{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #1b1b1b;
+}
+
+.titulo-container p{
+    color: #D32F2F;
+    font-weight: bold;
+}
+
+/* Layout principal con menú lateral derecho */
+.historia-layout {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Contenedor principal */
+.historia-container {
+    position: relative;
+    padding: 2rem;
+    padding-right: 220px; /* Espacio para el menú lateral */
+}
+
+/* Menú de navegación lateral derecho */
+.menu-lateral-derecho {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
+    background: #fff;
+    border-left: 1px solid #e0e0e0;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.menu-lateral-items {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-lateral-items li {
+    margin: 0;
+    width: 100%;
+}
+
+.menu-lateral-items li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.75rem;
+    transition: all 0.3s ease;
+    border-right: 3px solid transparent;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu-lateral-items li a:hover {
+    background: #f8f9fa;
+    color: #D32F2F;
+    border-right-color: #D32F2F;
+    padding-right: 1.5rem;
+}
+
+.menu-lateral-items li a.activo {
+    background: #D32F2F;
+    color: white;
+    border-right-color: #D32F2F;
+    box-shadow: inset -4px 0 0 #fff;
+}
+
+/* Secciones de historia */
+.seccion-historia {
+    margin-bottom: 0; /* Eliminado el espaciado vertical */
+    padding: 3rem 0;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.seccion-historia::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: -1;
+    border-radius: 20px;
+}
+
+/* Modo fluido: reduce contraste entre secciones y suaviza transiciones */
+.modo-fluido .seccion-historia {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-radius: 0;
+}
+
+.modo-fluido .seccion-historia::before {
+    background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.92));
+    border-radius: 0;
+}
+
+.modo-fluido .seccion-historia + .seccion-historia {
+    margin-top: -1rem; /* solapa ligera para borrar el salto */
+}
+
+.contenido-seccion {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* Estilos específicos por sección */
+.fundacion {
+    background: linear-gradient(135deg, #f4e4bc 0%, #e8d5a8 100%);
+}
+
+.primer-estadio {
+    background: linear-gradient(135deg, #e8f4f8 0%, #d1e7dd 100%);
+}
+
+.elecciones {
+    background: linear-gradient(135deg, #f0e6ff 0%, #e6d7ff 100%);
+}
+
+.primer-plantel {
+    background: linear-gradient(135deg, #ffe6e6 0%, #ffd6d6 100%);
+}
+
+.epoca-dorada {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+}
+
+.campeonatos {
+    background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+}
+
+.modernizacion {
+    background: linear-gradient(135deg, #e6ffe6 0%, #d4edda 100%);
+}
+
+.nuevos-horizontes {
+    background: linear-gradient(135deg, #e6f3ff 0%, #cce7ff 100%);
+}
+
+.estadio-actual {
+    background: linear-gradient(135deg, #fff3e6 0%, #ffe6cc 100%);
+}
+
+.era-moderna {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.era-digital {
+    background: linear-gradient(135deg, #e8f5e8 0%, #d4f1d4 100%);
+}
+
+.presente-futuro {
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+}
+
+/* Texto principal */
+.texto-principal {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.texto-principal h2 {
+    font-size: 2.2rem;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.texto-principal p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Utilidades de imagen dentro del flujo del texto */
+.media-flotante {
+    margin: 0.25rem 0 1rem 0;
+}
+
+.media-izq {
+    float: left;
+    width: min(40%, 360px);
+    margin: 0.25rem 1rem 0.75rem 0;
+    shape-outside: inset(0 round 12px);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.media-der {
+    float: right;
+    width: min(40%, 360px);
+    margin: 0.25rem 0 0.75rem 1rem;
+    shape-outside: inset(0 round 12px);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Variante para imágenes apaisadas (más anchas) */
+.media-wide {
+    width: min(55%, 520px);
+}
+
+.media-full {
+    width: 100%;
+    margin: 1.25rem 0;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.media-flotante img,
+.media-full img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Aclarador de floats para que el resto del layout no colapse */
+.texto-principal::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Ajuste específico: reducir imagen */
+#inicios-2 .media-izq {
+    width: min(16%, 300px);
+}
+
+/* Imágenes flotantes */
+.imagen-flotante {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.imagen-flotante:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.imagen-flotante img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.imagen-flotante:hover .caption {
+    transform: translateY(0);
+}
+
+/* Posicionamiento de imágenes */
+.imagen-izquierda {
+    justify-self: start;
+    max-width: 350px;
+}
+
+.imagen-derecha {
+    justify-self: end;
+    max-width: 350px;
+}
+
+.imagen-centro {
+    justify-self: center;
+    max-width: 350px;
+}
+
+/* Layouts específicos para diferentes secciones */
+.fundacion .contenido-seccion {
+    grid-template-columns: 1fr 400px;
+    grid-template-areas: "texto imagen1";
+    grid-template-rows: auto auto;
+}
+
+.fundacion .texto-principal {
+    grid-area: texto;
+    grid-row: 1 / 3;
+}
+
+.fundacion .imagen-flotante:nth-of-type(2) {
+    grid-area: imagen1;
+    justify-self: center;
+}
+
+.fundacion .imagen-flotante:nth-of-type(1) {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+    max-width: 300px;
+}
+
+.primer-estadio .contenido-seccion {
+    grid-template-columns: 400px 1fr;
+    grid-template-areas: "imagen texto";
+}
+
+.primer-estadio .texto-principal {
+    grid-area: texto;
+}
+
+.primer-estadio .imagen-flotante {
+    grid-area: imagen;
+}
+
+.elecciones .contenido-seccion {
+    grid-template-columns: 1fr 400px;
+    grid-template-areas: "texto imagen .";
+}
+
+.elecciones .texto-principal {
+    grid-area: texto;
+}
+
+.elecciones .imagen-flotante {
+    grid-area: imagen;
+}
+
+.primer-plantel .contenido-seccion {
+    grid-template-columns: 400px 1fr;
+    grid-template-areas: "imagen texto";
+}
+
+.primer-plantel .texto-principal {
+    grid-area: texto;
+}
+
+.primer-plantel .imagen-flotante {
+    grid-area: imagen;
+}
+
+.epoca-dorada .contenido-seccion {
+    grid-template-columns: 1fr 400px;
+    grid-template-areas: "texto imagen1";
+    grid-template-rows: auto auto;
+}
+
+.epoca-dorada .texto-principal {
+    grid-area: texto;
+    grid-row: 1 / 3;
+}
+
+.epoca-dorada .imagen-derecha {
+    grid-area: imagen1;
+}
+
+.epoca-dorada .imagen-centro {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+    max-width: 300px;
+}
+
+.campeonatos .contenido-seccion {
+    grid-template-columns: 300px 1fr 300px;
+    grid-template-areas: "imagen1 texto imagen2";
+}
+
+.campeonatos .texto-principal {
+    grid-area: texto;
+}
+
+.campeonatos .imagen-izquierda {
+    grid-area: imagen1;
+}
+
+.campeonatos .imagen-derecha {
+    grid-area: imagen2;
+}
+
+/* Botón volver arriba */
+.boton-volver-arriba {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: #D32F2F;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.boton-volver-arriba.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.boton-volver-arriba:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.seccion-historia {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .historia-container {
+        padding: 1rem;
+        padding-right: 200px;
+    }
+    
+    .menu-lateral-derecho {
+        width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .historia-container {
+        padding: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .menu-lateral-derecho {
+        position: relative;
+        width: 100%;
+        margin-top: 1rem;
+        border-left: none;
+        border-top: 1px solid #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .lista-items-lateral {
+        position: relative;
+        width: 100%;
+        top: auto;
+        margin-top: 1rem;
+        border-left: none;
+        border-top: 3px solid #D32F2F;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(211, 47, 47, 0.15);
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+    
+    .menu-lateral-items {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0.25rem;
+    }
+    
+    .menu-lateral-items li {
+        width: 100%;
+    }
+    
+    .menu-lateral-items li a {
+        padding: 0.75rem 1rem;
+        border-right: none;
+        border-radius: 6px;
+        background: #f8f9fa;
+        border: 1px solid #e9ecef;
+        font-size: 0.8rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .menu-lateral-items li a:hover {
+        background: #D32F2F;
+        color: white;
+        border-color: #D32F2F;
+        padding-right: 1rem;
+    }
+    
+    .menu-lateral-items li a.activo {
+        background: #D32F2F;
+        color: white;
+        border-color: #D32F2F;
+        box-shadow: none;
+    }
+    
+    .contenido-seccion {
+        grid-template-columns: 1fr !important;
+        grid-template-areas: none !important;
+        gap: 1.5rem;
+    }
+    
+    .texto-principal {
+        padding: 1.5rem;
+    }
+    
+    .texto-principal h2 {
+        font-size: 1.8rem;
+    }
+    
+    .imagen-flotante {
+        max-width: 100% !important;
+        justify-self: center !important;
+    }
+    
+    .imagen-flotante img {
+        max-height: 300px;
+    }
+    
+    .boton-volver-arriba {
+        bottom: 1rem;
+        right: 1rem;
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    
+    .menu-lateral-items {
+        padding: 0.5rem;
+    }
+    
+    .menu-lateral-items li a {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.75rem;
+    }
+    
+    .texto-principal h2 {
+        font-size: 1.5rem;
+    }
+    
+    .texto-principal p {
+        font-size: 1rem;
+    }
+    
+    .imagen-flotante img {
+        max-height: 250px;
+    }
+}
+
+/* Lista de items lateral debajo del menú */
+.lista-items-lateral {
+    position: absolute;
+    right: 0;
+    top: 540px; /* Aumentado de 400px a 520px para evitar solapamiento */
+    width: 200px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-left: 3px solid #D32F2F;
+    box-shadow: -4px 0 15px rgba(211, 47, 47, 0.15);
+    border-radius: 12px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.lista-items-lateral h3 {
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+    border-bottom: 3px solid #D32F2F;
+    padding-bottom: 0.75rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.items-lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.items-lista li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(211, 47, 47, 0.2);
+    font-size: 0.8rem;
+    color: #333;
+    line-height: 1.5;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.items-lista li:last-child {
+    border-bottom: none;
+}
+
+.items-lista li:hover {
+    color: #D32F2F;
+    padding-left: 0.75rem;
+    background: rgba(211, 47, 47, 0.05);
+    border-radius: 6px;
+    margin-left: -0.5rem;
+    padding-left: 0.5rem;
+}
+
+.items-lista li::before {
+    content: "•";
+    color: #D32F2F;
+    font-weight: bold;
+    position: absolute;
+    left: -0.5rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.items-lista li:hover::before {
+    opacity: 1;
+    left: 0;
+}
